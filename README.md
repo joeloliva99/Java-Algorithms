@@ -1,6 +1,6 @@
 # Algorithm_DAA
 
-(SP - Descripción)
+<b>(SP - Descripción)</b>
 
 - Introducción
 
@@ -12,7 +12,7 @@ Podrás encontrar un total 5 algoritmos planteados con algunos ejemplos que tamb
 
 Primero, desarrollaremos una breve descripción en la que explicaremos sin ambigüedades el algoritmo, todas sus utilidades y sus ventajas. A continuación, el algoritmo expresado en pseudocódigo, y en tercer lugar, el mismo implementado en Java de distintas maneras.
 
-(ENG - Description)
+<b>(ENG - Description)</b>
 
 - Introduction
 

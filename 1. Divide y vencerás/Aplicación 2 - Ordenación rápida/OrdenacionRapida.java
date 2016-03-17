@@ -14,7 +14,7 @@ public class OrdenacionRapida{
        while(A[i]<=pivote && i<j) i++; // busca elemento mayor que pivote
        while(A[j]>pivote) j--;         // busca elemento menor que pivote
        if (i<j) {                      // si no se han cruzado                      
-           aux= A[i];                  // los intercambia
+           aux=A[i];                  // los intercambia
            A[i]=A[j];
            A[j]=aux;
        }
@@ -29,9 +29,9 @@ public class OrdenacionRapida{
     
     /* --------------------- PRUEBA DEL ALGORITMO --------------------- */
     public static void main(String[] args){
-        int[] v = {40, 21, 1, 3, 14, 4};
+        int[] v={40, 21, 1, 3, 14, 4};
         System.out.println(Arrays.toString(v)); // imprimimos el antiguo vector
-        quicksort(v, 0, v.length);
+        quicksort(v, 0, v.length-1);
         System.out.println(Arrays.toString(v)); // imprimimos el vector ordenado
     }
     

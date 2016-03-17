@@ -1,4 +1,4 @@
-package Algoritmo;
+import java.util.Arrays;
 
 public class OrdenacionPorFusion{
 

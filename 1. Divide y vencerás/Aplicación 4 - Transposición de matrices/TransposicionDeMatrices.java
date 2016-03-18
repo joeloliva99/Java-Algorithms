@@ -5,7 +5,7 @@ public class TransposicionDeMatrices{
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     public static void transponer(int[][] matriz, int filaInic, int colInic, int filaFin, int colFinal){
         if (filaFin==(filaInic+1)){ // caso base, si tenemos una matriz de 2x2, entonces 
-            int aux = matriz[filaInic][colFinal]; // intercambiamos sus diagonales
+            int aux=matriz[filaInic][colFinal]; // intercambiamos sus diagonales
             matriz[filaInic][colFinal] = matriz[filaFin][colInic];
             matriz[filaFin][colInic] = aux;
         } else { // caso recursivo
@@ -16,11 +16,11 @@ public class TransposicionDeMatrices{
             transponer(matriz, centroFila+1, colInic, filaFin, centroCol);
             transponer(matriz, centroFila+1, centroCol+1, filaFin, colFinal);
             int aux;
-            int jAux = centroFila+1; // declaramos un índice para transponer el segundo y tercer cuarto
+            int jAux=centroFila+1; // declaramos un índice para transponer el segundo y tercer cuarto
             for (int i=(filaInic); i<=centroFila; i++){ 
-                int iAux = colInic; // declaramos el otro índice para transponer el segundo y tercer cuarto
+                int iAux=colInic; // declaramos el otro índice para transponer el segundo y tercer cuarto
                 for (int j=(centroCol+1); j<=colFinal; j++){
-                    aux = matriz[i][j]; 
+                    aux=matriz[i][j]; 
                     matriz[i][j] = matriz[jAux][iAux];
                     matriz[jAux][iAux] = aux;
                     iAux++;
@@ -32,7 +32,7 @@ public class TransposicionDeMatrices{
     
     /* --------------------- PRUEBA DEL ALGORITMO --------------------- */
     public static void main(String[] args){
-        int [][] numeros = {{10,11,12,13}, {14,15,16,17}, {18,19,20,21}, {22,23,24,25}}; //ha de ser una matriz cuadrada 2^n
+        int [][] numeros={{10,11,12,13}, {14,15,16,17}, {18,19,20,21}, {22,23,24,25}}; //ha de ser una matriz cuadrada 2^n
         for (int i=0; i<numeros.length; i++){ // imprime la matriz bidimensional por pantalla
             for (int j=0; j<numeros[0].length; j++){
                 System.out.print(numeros[i][j]+" ");

@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class OrdenacionPorFusion{
 
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
-    public void fusionar(int[] v, int inf, int medio, int sup){
+    private void fusionar(int[] v, int inf, int medio, int sup){
         int[] vAux=new int[v.length]; // creamos un array auxiliar para poder cambiar los valores 
         int i1=inf; // i1 recorre el array de izquierda al medio
         int i2=medio+1; // i2 recorre el array del medio al final
@@ -31,7 +31,7 @@ public class OrdenacionPorFusion{
         }
     }
     
-    public void mergeSort(int[] v, int inf, int sup){
+    public static void mergeSort(int[] v, int inf, int sup){
         if (inf<sup){
             int medio=(inf+sup)/2;
             mergeSort(v, inf, medio); // Primera mitad del array

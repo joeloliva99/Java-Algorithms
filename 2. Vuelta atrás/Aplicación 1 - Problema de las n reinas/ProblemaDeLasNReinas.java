@@ -25,8 +25,10 @@ public class ProblemaDeLasNReinas{
         }
     }
     
+    /* --------------------- PRUEBA DEL ALGORITMO --------------------- */
     public static void main(String[] args){
         int[] tablero=new int[4]; // la longitud de nuestro array son las reinas que queremos colocar. En este caso, 4
         colocarReinas(0, tablero); // inicializamos nuestro algoritmo con Qi=0 y el array vacío con un tamaño fijo
     }
+    
 }

@@ -8,7 +8,7 @@ public class ColoreadoDeGrafos{
     static int nNodos;
     
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
-    private static int getNodeColor(int k) {
+    private static int getColorNodo(int k) {
         do { 
             colores[k]=colores[k]+1; // asigna el siguiente color
             if (colores[k]==nColores+1) return 0; // si todos los colores han sido probados en el nodo, no lo pinta
@@ -23,7 +23,7 @@ public class ColoreadoDeGrafos{
     
     public static void mColorear(int k) {
         do { 
-            colores[k]=getNodeColor(k); // dota de un color a este nodo
+            colores[k]=getColorNodo(k); // dota de un color a este nodo
             if (colores[k]==0) return; // si ya se han repartido todos los colores, acaba
             if (k==nNodos) // si se han coloreado todos los nodos correctamente, imprime la solución. Este algoritmo ofrece todas las soluciones posibles
                 System.out.println(Arrays.toString(colores));

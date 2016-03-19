@@ -21,7 +21,7 @@ public class Laberinto{
 	    }
     }
     
-    public boolean paso(int x, int y) {
+    private boolean paso(int x, int y) {
         contador++; // en cada llamada incrementaremos el contador
         if (laberinto[x][y]=='X'){ // si hemos llegado a X quiere decir que hemos encontrado solución
             return true; // luego, el algoritmo termina
@@ -48,15 +48,15 @@ public class Laberinto{
 	    return false; // vuelta atrás si la solución no se encuentra aquí
     }
 	
-    public String toString() { // imprimiremos nuestra solución. Debido a que la clase Arrays no tiene implementado
-        String output = "";    // un método toString para arrays bidimensionales, lo programamos a mano
+    private String toString() { // imprimiremos nuestra solución. Debido a que la clase Arrays no tiene implementado
+        String salida = "";    // un método toString para arrays bidimensionales, lo programamos a mano
         for (int x=0; x<laberinto.length; x++) { // recorremos filas
             for (int y=0; y<laberinto[x].length; y++) { // recorremos columnas
                 output += laberinto[x][y] + " "; // output es nuestra variable que va almacenando los valores a imprimir
             }
-            output += "\n"; // devolvemos esta variable con un salto de línea
+            salida += "\n"; // devolvemos esta variable con un salto de línea
         }
-        return output;
+        return salida;
     }
 	
     /* --------------------- PRUEBA DEL ALGORITMO --------------------- */

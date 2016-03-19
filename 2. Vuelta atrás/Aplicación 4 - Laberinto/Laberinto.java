@@ -59,6 +59,7 @@ public class Laberinto{
         return output;
     }
 	
+    /* --------------------- PRUEBA DEL ALGORITMO --------------------- */
 	public static void main(String[] args) {
 		Laberinto m = new Laberinto(); // construimos un objeto de la clase Laberinto por defecto
 		m.laberinto[1][1] = 'X'; // introducimos en este caso, la salida (X) en las coordenadas (1,1)

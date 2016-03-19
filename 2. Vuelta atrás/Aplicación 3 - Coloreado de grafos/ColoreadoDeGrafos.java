@@ -7,6 +7,7 @@ public class ColoreadoDeGrafos{
     static int nColores;
     static int nNodos;
     
+    /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     private static int getNodeColor(int k) {
         do { 
             colores[k]=colores[k]+1; // asigna el siguiente color
@@ -30,6 +31,7 @@ public class ColoreadoDeGrafos{
         }while(true);
     }
     
+    /* --------------------- PRUEBA DEL ALGORITMO --------------------- */
     public static void main(String[] args) throws Exception { 
             nColores=3; // seleccionamos 3 colores, por ejemplo. La matriz de adyacencia indica 1 si los nodos están conectados, y 0 si no
             matrizAdyacencia=new int[][]{{0, 0, 0, 0, 0}, {0, 1, 1, 0, 1}, {0, 1, 1, 1, 1}, {0, 0, 1, 1, 1}, {0, 1, 1, 1, 1}}; 

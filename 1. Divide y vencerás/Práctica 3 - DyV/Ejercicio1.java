@@ -17,7 +17,7 @@ public class Ejercicio1{
                 solucion[1]=2;
         }
             return solucion;
-       } else {
+        } else {
             int centro =(inicio+fin)/2;
             int [] solucionIzda = cajaAburrida(bombones,inicio,centro);
             int [] solucionDcha = cajaAburrida(bombones,centro+1,fin);

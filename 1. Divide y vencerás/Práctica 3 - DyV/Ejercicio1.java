@@ -21,16 +21,16 @@ public class Ejercicio1{
             int centro =(inicio+fin)/2;
             int [] solucionIzda = cajaAburrida(bombones,inicio,centro);
             int [] solucionDcha = cajaAburrida(bombones,centro+1,fin);
-            if (solucionIzda[0] !=0){
-                for (int i = centro+1;i<=fin;i++){
-                    if(bombones[i] == solucionIzda[0]){
+            if (solucionIzda[0]!=0){
+                for (int i=centro+1;i<=fin;i++){
+                    if(bombones[i]==solucionIzda[0]){
                         solucionIzda[1]++;
                     }
                 }
             }
-            int numeroBombones = fin-inicio+1;
-                if(solucionIzda[1]>(numeroBombones/2))
-                    return solucionIzda;
+            int numeroBombones=fin-inicio+1;
+            if(solucionIzda[1]>(numeroBombones/2))
+                return solucionIzda;
             else {
                 if(solucionDcha[0]!=0){
                     for (int i = inicio;i<=centro;i++){

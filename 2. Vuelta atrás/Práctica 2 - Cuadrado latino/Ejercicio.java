@@ -16,11 +16,11 @@ public class Ejercicio {
         }
     }
     
-    public void run(){
-        solve(0, 0);
+    public void ejecutar(){
+        resolver(0, 0);
     }
     
-    public void solve(int fila, int col){
+    public void resolver(int fila, int col){
         for (int i=0; i<conjuntoColores.length; i++){
             if ((!existeColorEnFila(fila, conjuntoColores[i]))&&(!existeColorEnCol(col, conjuntoColores[i]))){
                 cuadrado[fila][col]=conjuntoColores[i];
@@ -30,15 +30,11 @@ public class Ejercicio {
             } else {
                 if (esSolucionEncontrada()){
                     System.out.println("Solución encontrada.");
-                    printSolution();
+                    imprimirSolucion();
                     break;
                 }
             }
         }
-    }
-    
-    public boolean notValid(int fila, int col, int color){
-        return (existeColorEnFila(fila, color))&&(existeColorEnCol(col, color));
     }
     
     public boolean existeColorEnFila(int fila, int color){
@@ -69,7 +65,7 @@ public class Ejercicio {
         return true;
     }
     
-    public void printSolution(){
+    public void imprimirSolucion(){
         for (int i=0; i<cuadrado.length; i++) {
             for (int j = 0; j < cuadrado[0].length; j++) {
                 System.out.print(cuadrado[i][j] + " ");

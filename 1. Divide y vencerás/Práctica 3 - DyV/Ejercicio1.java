@@ -1,48 +1,33 @@
 public class Ejercicio1{
     
-    public int[] cajaAburrida(int[] bombones, int inicio, int fin){
-        int[] solucion=new int[2];
-        //Por defecto la caja será aburrida, entonces devuelve 0
-        solucion[0]=0;
-        solucion[1]=0;
-        if (inicio>fin){
-            return solucion;
-        } else if (inicio==fin){
-            solucion[0]=bombones[inicio];
-            solucion[1]++;
-            return solucion;
-        } else if (fin-inicio==1){
-            if (bombones[inicio]==bombones[fin]){
-                solucion[0]=bombones[inicio];
-                solucion[1]=2;
-        }
-            return solucion;
-        } else {
-            int centro =(inicio+fin)/2;
-            int [] solucionIzda = cajaAburrida(bombones,inicio,centro);
-            int [] solucionDcha = cajaAburrida(bombones,centro+1,fin);
-            if (solucionIzda[0]!=0){
-                for (int i=centro+1;i<=fin;i++){
-                    if(bombones[i]==solucionIzda[0]){
-                        solucionIzda[1]++;
-                    }
-                }
-            }
-            int numeroBombones=fin-inicio+1;
-            if(solucionIzda[1]>(numeroBombones/2))
-                return solucionIzda;
+    public static int cajaAburrida(int[] caja, int izq, int der){
+        int sol=-1;
+        if (izq>der)
+            return sol;
+        else {
+            if (izq==der)
+                sol=caja[izq];
             else {
-                if(solucionDcha[0]!=0){
-                    for (int i = inicio;i<=centro;i++){
-                        if(bombones[i] == solucionDcha[0])
-                            solucionDcha[1]++;
-                    }
-                }
-                if(solucionDcha[1]>(bombones.length/2))
-                    return solucionDcha;            
+                int mitad=(izq+der)/2;
+                int mitad1=cajaAburrida(caja, izq, mitad);
+                int mitad2=cajaAburrida(caja, mitad+1, der);
+                if (esBombonMasRepetido(caja, mitad1))
+                   sol=mitad1;
+                else if (esBombonMasRepetido(caja, mitad2))
+                   sol=mitad2;
             }
-            return solucion;
-        }        
+            return sol;
+        }
+    }
+   
+    private static boolean esBombonMasRepetido(int[] caja, int x){
+        int contador=0;
+        for (int i=0; i<caja.length; i++)
+            if (x==caja[i])
+                contador++;
+        if (contador>=(caja.length/2+1))
+            return true;
+        return false;
     }
     
 }

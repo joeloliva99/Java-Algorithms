@@ -6,26 +6,26 @@ public class EscogerKElementos{
 
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     public static int[] escogerkElementos(int k, Integer[] vectorNumeros){
-        ArrayList<Integer> numeros=new ArrayList<Integer>(Arrays.asList(vectorNumeros)); // Necesitamos una estructura de datos
-        int[] solucion=new int[k]; // Definimos el vector solución
+        ArrayList<Integer> numeros=new ArrayList<Integer>(Arrays.asList(vectorNumeros));
+        int[] solucion=new int[k];
         int i=0;
         int j=0;
-        while (i<k || j<numeros.size()) // Mientras no nos pasemos de los k elementos y de la estructura de datos
-            if (numeros.get(j)==getElementoMayor(vectorNumeros)){ // Si estamos sobre el elemento mayor
-                solucion[i]=numeros.get(j); // Lo incluimos en el vector
-                numeros.remove(j); // Y lo eliminamos de la estructura de datos
-                j=0; // Reseteamos el contador sobre el ArrayList
-                i++; // E incrementamos el número de elemento recorrido
+        while (i<k && j<numeros.size())
+            if (numeros.get(j)==getElementoMayor(numeros)){
+                solucion[i]=numeros.get(j);
+                numeros.remove(j);
+                j=0;
+                i++;
             } else
                 j++;
         return solucion;
     }
     
-    private static int getElementoMayor(Integer[] numeros){ // Devuelve el elemento mayor
+    private static int getElementoMayor(ArrayList<Integer> numeros){
         int elemento=0;
-        for (int i=0; i<numeros.length; i++){
-            if (elemento<numeros[i])
-                elemento=numeros[i];
+        for (int i=0; i<numeros.size(); i++){
+            if (elemento<numeros.get(i))
+                elemento=numeros.get(i);
         }
         return elemento;
     }

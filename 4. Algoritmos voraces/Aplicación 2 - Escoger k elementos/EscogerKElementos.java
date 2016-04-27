@@ -4,6 +4,7 @@ import java.util.List;
 
 public class EscogerKElementos{
 
+    /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     public static int[] escogerkElementos(int k, Integer[] vectorNumeros){
         ArrayList<Integer> numeros=new ArrayList<Integer>(Arrays.asList(vectorNumeros)); // Necesitamos una estructura de datos
         int[] solucion=new int[k]; // Definimos el vector solución

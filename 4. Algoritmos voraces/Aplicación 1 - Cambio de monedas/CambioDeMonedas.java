@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class CambioDeMonedas{
 
+    /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     private static int getPosicionMejorMoneda(double total, double[] monedas){
         double[] resultados=new double[monedas.length];
         for (int i=0; i<resultados.length; i++){ // Almacenamos el resultado de restar la moneda i con el total

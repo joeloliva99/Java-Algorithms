@@ -24,9 +24,9 @@ public class Ejercicio {
         for (int i=0; i<conjuntoColores.length; i++){
             if ((!existeColorEnFila(fila, conjuntoColores[i]))&&(!existeColorEnCol(col, conjuntoColores[i]))){
                 cuadrado[fila][col]=conjuntoColores[i];
-                if (col<=2) resolver(fila, col+1);
+                if (col<=cuadrado[0].length-1) resolver(fila, col+1);
                 else 
-                    if (fila<=2) resolver(fila+1, 0);
+                    if (fila<=cuadrado.length-1) resolver(fila+1, 0);
             } else {
                 if (esSolucionEncontrada()){
                     System.out.println("Solución encontrada.");

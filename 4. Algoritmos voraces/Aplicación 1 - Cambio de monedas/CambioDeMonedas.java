@@ -13,7 +13,7 @@ public class CambioDeMonedas{
         double mejor=resultados[0];
         int contador=0;
         for (int i=0; i<resultados.length; i++) // Buscamos el mejor resultado (la mejor moneda, que haga que la resta sea mayor)
-            if (mejor>resultados[i]&&){
+            if (mejor>resultados[i]){
                 mejor=resultados[i];
                 contador++; // También realizamos un seguimiento sobre su posición
             }

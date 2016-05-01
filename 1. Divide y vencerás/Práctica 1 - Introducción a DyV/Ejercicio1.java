@@ -4,7 +4,7 @@ public class Ejercicio1{
         if (n<10)
             return n;
         else
-            return (n%10)*nCifras(n)+invertirNumero(n/95); 
+            return (n%10)*nCifras(n)+invertirNumero(n/10); 
     }
     
     public int nCifras(){

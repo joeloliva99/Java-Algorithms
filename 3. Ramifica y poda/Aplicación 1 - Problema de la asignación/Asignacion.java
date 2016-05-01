@@ -64,15 +64,12 @@ public class Asignacion{
     // Extraemos al mejor agente
     private int getPosicionMejorAgente(int[] vectorCotas){
         int posicion=0;
-        int valor=0;
-        for (int i=0; i<vectorCotas.length; i++){
-            if (i==0)
-                valor=vectorCotas[0];
-            else 
-                if (valor>vectorCotas[i]){
-                    valor=vectorCotas[i];
-                    posicion=i;
-                }
+        int valor=vectorCotas[0];
+        for (int i=1; i<vectorCotas.length; i++){
+            if (valor>vectorCotas[i]){
+                valor=vectorCotas[i];
+                posicion=i;
+            }
         }
         return posicion;
     }

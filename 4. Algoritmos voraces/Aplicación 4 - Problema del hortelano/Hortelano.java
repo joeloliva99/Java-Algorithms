@@ -3,6 +3,7 @@ public class Hortelano{
     public static int n;
     public static int k;
     
+    /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     public static int[] asignaTierras(int[][] h){
         int[] s=new int[n];
         for (int i=0; i<n; i++)

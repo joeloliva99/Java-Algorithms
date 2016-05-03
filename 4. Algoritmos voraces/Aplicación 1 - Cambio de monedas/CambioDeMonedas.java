@@ -4,18 +4,12 @@ public class CambioDeMonedas{
 
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     private static int getPosicionMejorMoneda(double total, double[] monedas){
-        double[] resultados=new double[monedas.length];
-        for (int i=0; i<resultados.length; i++){ // Almacenamos el resultado de restar la moneda i con el total
-            resultados[i]=total-monedas[i];
-            if (resultados[i]<0) // Tenemos en cuenta las restas negativas. Si es negativa, forzamos a que sea igual
-                resultados[i]=total; // a total, para que la siguiente parte del algoritmo no se centre en ese resultado,
-        }                            // porque la moneda no nos sirve
-        double mejor=resultados[0];
+        double resultado=total;
         int contador=0;
-        for (int i=0; i<resultados.length; i++) // Buscamos el mejor resultado (la mejor moneda, que haga que la resta sea mayor)
-            if (mejor>resultados[i]&&){
-                mejor=resultados[i];
-                contador++; // También realizamos un seguimiento sobre su posición
+        for (int i=0; i<monedas.length; i++)
+            if ((resultado>(total-monedas[i]))&&(total-monedas[i]>=0)){
+                resultado=(total-monedas[i]);
+                contador=i;
             }
         return contador;
     }

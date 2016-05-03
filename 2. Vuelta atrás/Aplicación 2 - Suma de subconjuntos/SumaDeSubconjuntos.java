@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class SumaDeSubconjuntos{
     
@@ -29,18 +30,9 @@ public class SumaDeSubconjuntos{
     }
 
     private void sumaSubconjuntos(int s, int k, int r) { // esta implementación imprime todas las soluciones posibles
-        int i = 0;
         x[k] = 1; // Como es un arbol binario, de 1 y 0, entonces probamos con el primer elemento si vale 1
         if (s + w[k] == suma) { // Si hemos llegado a la suma (caso base)
-            System.out.println();
-            for (i = 1; i <= k; i++) { // imprimimos el vector x, vector de unos y ceros y solución del problema
-                System.out.print(" " + x[i]);
-            }
-            if (i<x.length){ // esta instrucción sirve para imprimir todo el vector (para que no se quede a medio imprimir)
-                for (int j=i; j<x.length; j++){
-                    System.out.print(" "+ x[j]);
-                }
-            }
+            System.out.println(Arrays.toString(x)); // Imprimimos la solución
         } else if ((s + w[k] + w[k + 1]) <= suma) { // si no estamos en la solución, pero la suma es inferior a la deseada
             sumaSubconjuntos(s + w[k], k + 1, r - w[k]); // entonces seguimos con x[k]=1, pero accedemos al siguiente nodo del árbol
         }

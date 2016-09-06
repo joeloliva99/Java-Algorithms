@@ -5,15 +5,22 @@ public class Hortelano{
     
     /* ----------------- IMPLEMENTACIÓN DEL ALGORITMO ----------------- */
     public static int[] asignaTierras(int[][] h){
-        int[] s=new int[n];
-        for (int i=0; i<n; i++)
+        int[] s=new int[k];
+        for (int i=0; i<k; i++)
             s[i]=-1; // Este valor indica los hortelanos no asignados
-        int c;
-        int j=0;
+        int c, j;
         for (int i=0; i<n; i++){
             c=seleccionarCandidato(h);
-            // Introducimos al mejor candidato en la solucion
-            s[j]=c;
+            // Introducimos al mejor candidato en la solucion, si está disponible
+            j=h[0][c]-1;
+            if (s[j]==-1)
+                s[j]=c;
+            else{
+                while (s[j]==-1 && j>=0)
+                    j--;
+                if (j>=0 && s[j]==-1)
+                    s[j]=c;
+            }
             // Eliminamos el candidato
             quitarCandidato(h, c);
             j++;

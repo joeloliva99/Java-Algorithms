@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project name="Algorithm_DAA" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Algorithm_DAA.</description>
-    <import file="build-impl.xml"/>
-
-</project>

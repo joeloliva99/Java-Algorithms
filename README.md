@@ -16,3 +16,9 @@ Primero, desarrollaremos una breve descripción en la que explicaremos sin ambig
 ## English ![UKLanguage](media/ukFlag.png) ![EEUULanguage](media/eeuuFlag.png)
 
 In this repository you can find some of the most used algorithms (developed in Java). This repository is for those people who are studying in the university or for self-learners.
+
+The poor information about these algorithms made me think on this repository. If you need to find a solution for some of these algorithmic problems on Internet, you will find solutions on pseudocode, scripting languages, other programming languages like C..., but sometimes you need find a solution in Java.
+
+- What could you find here?
+
+5 algorithmic techniques with some examples. These examples will be programmed too. In each algorithm: first of all, pseudocode. Next of this, we will pass from pseudocode to Java language.

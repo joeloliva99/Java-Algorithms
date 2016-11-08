@@ -36,6 +36,7 @@ public class SumaDeSubconjuntos{
         } else if ((s + w[k] + w[k + 1]) <= suma) { // si no estamos en la solución, pero la suma es inferior a la deseada
             sumaSubconjuntos(s + w[k], k + 1, r - w[k]); // entonces seguimos con x[k]=1, pero accedemos al siguiente nodo del árbol
         }
+        x[k] = 0;
         if ((s + r - w[k]) >= suma && (s + w[k + 1]) <= suma) { // si no estamos en la solución, pero la suma es superior
             x[k] = 0; // entonces no contamos el elemento del nodo en el que estamos 
             sumaSubconjuntos(s, k + 1, r - w[k]); // procedemos al siguiente nodo del árbol

@@ -52,7 +52,7 @@ public class Laberinto{
         String salida = "";    // un método toString para arrays bidimensionales, lo programamos a mano
         for (int x=0; x<laberinto.length; x++) { // recorremos filas
             for (int y=0; y<laberinto[x].length; y++) { // recorremos columnas
-                output += laberinto[x][y] + " "; // output es nuestra variable que va almacenando los valores a imprimir
+                salida += laberinto[x][y] + " "; // output es nuestra variable que va almacenando los valores a imprimir
             }
             salida += "\n"; // devolvemos esta variable con un salto de línea
         }
